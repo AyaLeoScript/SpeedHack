@@ -1,9 +1,9 @@
--- Variabel untuk menyimpan kecepatan
+-- Variable Para Ma Save Ang Speed
 local speed = 20
 local speedEnabled = true
 local guiVisible = true
  
--- Fungsi untuk mengatur kecepatan
+-- Function Para Ma Adjust Ang Speed
 local function setSpeed(newSpeed)
     speed = newSpeed
     if speedEnabled then
@@ -36,13 +36,13 @@ mainFrame.BorderSizePixel = 0
 mainFrame.Active = true
 mainFrame.Draggable = true
 mainFrame.Parent = screenGui
-mainFrame.ClipsDescendants = true  -- Menyembunyikan elemen yang keluar dari batas bingkai
+mainFrame.ClipsDescendants = true  -- Remove Elements Sa Labas
  
 -- Add shadow to main frame
 local shadow = Instance.new("ImageLabel")
 shadow.Size = UDim2.new(1, 30, 1, 30)
 shadow.Position = UDim2.new(0, -15, 0, -15)
-shadow.Image = "rbxassetid://1316045217"  -- ID gambar bayangan
+shadow.Image = "rbxassetid://1316045217"  -- ID shadow picture
 shadow.ImageColor3 = Color3.new(0, 0, 0)
 shadow.ImageTransparency = 0.5
 shadow.ScaleType = Enum.ScaleType.Slice
@@ -65,7 +65,7 @@ titleLabel.BackgroundTransparency = 1
 titleLabel.TextColor3 = Color3.new(1, 1, 1)
 titleLabel.Text = "Aya Speed Hack"
 titleLabel.Font = Enum.Font.GothamBold
-titleLabel.TextSize = 18  -- Mengatur ukuran teks menjadi lebih kecil
+titleLabel.TextSize = 18  -- Set the text size to be smaller
 titleLabel.Parent = titleFrame
  
 -- Configure Close Button
@@ -163,9 +163,9 @@ end)
  
 -- Close button functionality
 closeButton.MouseButton1Click:Connect(function()
-    setSpeed(20)  -- Mengatur kecepatan kembali ke normal (20)
-    speedEnabled = true  -- Mengaktifkan kembali kecepatan
-    toggleButton.Text = "On"  -- Mengatur teks tombol toggle kembali menjadi "On"
+    setSpeed(20)  -- Set the speed back to normal (20)
+    speedEnabled = true  -- Reactivate speed
+    toggleButton.Text = "On"  -- Set the toggle button text back to "On"
     updateSpeed()
     screenGui:Destroy()  -- Menutup GUI
 end)
